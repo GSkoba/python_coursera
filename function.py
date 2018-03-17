@@ -26,4 +26,7 @@ def say(greeting, name):
 print(say('Hello','Kitty'))
 print(say(name='Kitty',greeting='Hello'))
 
-def greetin
+def greeting(greet = 'kek'):
+    print('Hello {}'.format(greet))
+
+greeting()
