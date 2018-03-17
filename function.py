@@ -30,3 +30,50 @@ def greeting(greet = 'kek'):
     print('Hello {}'.format(greet))
 
 greeting()
+
+def append_one(iterable =[]):
+    iterable.append(1)
+    return iterable
+
+print(append_one([1]))
+
+print(append_one())
+print(append_one())
+
+print(append_one.__defaults__)
+
+def printer(*args):
+    print(type(args))
+
+    for argument in args:
+        print(argument)
+
+
+printer(1,2,3,4,5,6)
+
+name_list = ['John','Bill','Any']
+
+printer(*name_list)
+
+def printer(**kwargs):
+    print(type(kwargs))
+    for key,values in kwargs.items():
+        print('{} - {}'.format(key,values))
+
+printer(a=10,b=11)
+
+playload = {
+    'user_id':117,
+    'feedback':{
+        'subject':'Registration fields',
+        'message':'There is no country for old man'
+    }
+}
+
+printer(**playload)
+
+def foo(*args,**kwargs):
+    printer(*args)
+    printer(**kwargs)
+
+foo(*name_list,playload)

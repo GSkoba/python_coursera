@@ -1,0 +1,5 @@
+f = open('filename','r+')
+print(f.read())
+print(f.tell())
+f.write('Hello\n')
+f.close()
